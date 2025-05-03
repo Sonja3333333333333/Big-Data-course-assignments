@@ -78,7 +78,7 @@ Data Mining - a process used by companies to turn raw data into useful informati
 2. **Conf. % (Confidence)** — **довіра** (confidence) до правила, виражена у відсотках. Це ймовірність того, що якщо відбувається подія **Antecedent (a)** (попередник), то також відбудеться подія **Consequent (c)** (наслідок). 
     
     $$
-    ⁍
+    \text{Confidence} = \frac{\text{Support}(A \cup C)}{\text{Support}(A)}
     $$
     
     Тобто це співвідношення кількості транзакцій, де одночасно присутні і попередник, і наслідок, до кількості транзакцій, де присутній тільки попередник.
@@ -91,7 +91,7 @@ Data Mining - a process used by companies to turn raw data into useful informati
 8. **Lift Ratio** — **коефіцієнт підйому** (lift). Це відношення **спільної підтримки попередника та наслідку** до **підтримки їх окремо**. Коефіцієнт підйому вказує, на скільки ймовірніше, що наслідок з’явиться при наявності попередника в порівнянні з випадковою ймовірністю.
     
     $$
-    \text{Lift} = \frac{\text{Support (a U c)}}{\text{Support (a)} \times \text{Support (c)}}
+    \text{Lift} = \frac{\text{Support}(A \cup C)}{\text{Support}(A) \times \text{Support}(C)}
     $$
     
     Якщо **Lift > 1**, це означає, що попередник та наслідок з’являються разом частіше, ніж очікувалося за випадковістю, і тому вони є асоційованими. Якщо **Lift < 1**, то це означає, що їх поява разом є меншою за очікувану випадкову ймовірність.
